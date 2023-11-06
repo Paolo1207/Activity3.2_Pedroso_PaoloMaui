@@ -155,3 +155,13 @@ VALUES
 
 ALTER TABLE item
 ADD item_price DECIMAL (10,5);
+
+/*Update the state of hero 1 to inactive.*/
+UPDATE public.hero
+SET is_active = FALSE
+WHERE hero_id = 1; 
+
+/*	Delete the item associated with hero 1.*/
+DELETE FROM public.heroitem
+WHERE hero_id = 1;
+
